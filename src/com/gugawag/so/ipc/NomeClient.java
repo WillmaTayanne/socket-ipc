@@ -13,11 +13,11 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Date;
 
-public class NomeClient {
+	public class NomeClient {
 	public static void main(String[] args)  {
 		try {
 			// this could be changed to an IP name or address other than the localhost
-			Socket servidorSock = new Socket("127.0.0.1",6013);
+			Socket servidorSock = new Socket("127.0.0.1",6013); //127.0.0.1
 			InputStream in = servidorSock.getInputStream();
 			BufferedReader bin = new BufferedReader(new InputStreamReader(in));
 
@@ -28,7 +28,7 @@ public class NomeClient {
 
 			PrintWriter pout = new PrintWriter(servidorSock.getOutputStream(), true);
 			// TODO Altere abaixo para enviar seu nome ao servidor
-			pout.println("SEU NOME AQUI");
+			pout.println("Willma Tayanne Costa da Silva - Cliente");
 			servidorSock.close();
 		}
 		catch (IOException ioe) {

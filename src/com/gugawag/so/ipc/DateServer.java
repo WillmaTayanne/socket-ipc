@@ -24,6 +24,7 @@ public class DateServer{
 				Socket client = sock.accept();
 				// Se chegou aqui, foi porque algum cliente se comunicou
 				System.out.println("Servidor recebeu comunicação do ip: " + client.getInetAddress() + "-" + client.getPort());
+				System.out.println("Willma Tayanne Costa da Silva - Servidor" );
 				PrintWriter pout = new PrintWriter(client.getOutputStream(), true);
 
 				// Escreve a data atual no socket
